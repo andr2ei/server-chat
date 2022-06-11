@@ -17,7 +17,7 @@ public class SignUpServiceImpl implements SignUpService {
     @SneakyThrows
     @Override
     public User register() {
-        senderService.sendMsg("Enter your login");
+        senderService.sendMsg("Enter your username");
         String login = clientReader.readLine();
 
         senderService.sendMsg("Enter your password");

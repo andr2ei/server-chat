@@ -1,5 +1,5 @@
 CREATE TABLE user (
     id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    login VARCHAR(100) UNIQUE,
+    username VARCHAR(100) UNIQUE,
     password VARCHAR(10)
 );

@@ -30,13 +30,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 if (menuNumber == Constants.SIGN_IN_MENU_NUMBER) {
                     SignInService signIn = new SignInServiceImpl(senderService, clientReader);
                     User user = signIn.login();
-                    senderService.sendMsg(user.getLogin() +" has signed in!");
+                    senderService.sendMsg(user.getUsername() +" has signed in!");
                     return user;
                 }
                 if (menuNumber == Constants.SIGN_UP_MENU_NUMBER) {
                     SignUpService signUp = new SignUpServiceImpl(senderService, clientReader);
                     User user = signUp.register();
-                    senderService.sendMsg("User with login " + user.getLogin() + " has been signed up!");
+                    senderService.sendMsg("User with login " + user.getUsername() + " has been signed up!");
                     return user;
                 } else {
                     senderService.sendMsg("Wrong menu number " + menuNumber + ". Please try again!");

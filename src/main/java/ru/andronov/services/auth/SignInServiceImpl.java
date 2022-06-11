@@ -18,7 +18,7 @@ public class SignInServiceImpl implements SignInService {
     @Override
     public User login() {
         while (true) {
-            senderService.sendMsg("Enter your login");
+            senderService.sendMsg("Enter your username");
             String login = clientReader.readLine();
 
             senderService.sendMsg("Enter your password");

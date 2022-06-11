@@ -1,4 +1,6 @@
 package ru.andronov.services;
 
-public interface ClientService extends Runnable {
+import ru.andronov.model.Observable;
+
+public interface ClientService extends Runnable, Observable {
 }
