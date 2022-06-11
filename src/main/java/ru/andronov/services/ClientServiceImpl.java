@@ -35,8 +35,10 @@ public class ClientServiceImpl implements ClientService {
     @SneakyThrows
     @Override
     public void notifyAll(String msg) {
-        for (Observer obs : observers) {
-            obs.notifyMe(msg);
+        synchronized (observers) {
+            for (Observer obs : observers) {
+                obs.notifyMe(msg);
+            }
         }
     }
 
